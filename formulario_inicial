@@ -1109,7 +1109,7 @@
     }
 
     //setar os valores do modelo de inversor;
-    if (document.getElementById("marca_inv").value == "OUTROS") {
+    if (document.getElementById("marca_inv").value == "OUTROS" || document.getElementById("verificador_02").value == "SIM") {
       localStorage.setItem('mod_i_resp', document.querySelector("#inversor_manual").value);
     }else{
       localStorage.setItem('mod_i_resp', document.querySelector("#modelo_in").value);
