@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Formulário - Eletro Aurora</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css'>
+  <link rel='stylesheet'
+    href='//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css'>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+</head>
+
+<body style="background-color: #343635">
+  <!-- partial:index.partial.html -->
+  <div class="container">
+
+    <form class="well form-horizontal" action=" " method="post" id="contact_form"
+      style="border-color: black; border-style: solid;">
+      <fieldset>
+
+        <!-- CABEÇALHO -->
+        <div style="text-align: center; border-color: black; border-style: solid; border-radius: 10px; ">
+          <img src="logo_ea-removebg-preview.png" height="40%" width="40%">
+          <h1 style="font-family:Arial, Helvetica, sans-serif; ">Formulário de energia solar</h1>
+        </div>
+        <!-- TCLIENTE-->
+
+        <div class="form-group" style="padding-top: 2%;">
+          <label class="col-md-4 control-label">Cliente:</label>
+          <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+              <input name="first_name" placeholder="Nome completo" class="form-control" id="cliente" type="text"
+                autocomplete="on|off">
+            </div>
+          </div>
+        </div>
+
+        <script>
+
+          var description = document.querySelector("#cliente");
+          description.addEventListener("paste", function (e) {
+            e.preventDefault();
+            alert("Comando inválido")
+          });
+
+
+        </script>
+
+        <!-- CONSULTOR-->
+
+        <div class="form-group">
+          <label class="col-md-4 control-label">Consultor:</label>
+          <div class="col-md-4 selectContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+              <select name="state" class="form-control selectpicker" id="consultor">
+                <option value="">Selecione o consultor</option>
+                <option>Márcio</option>
+                <option>Péricles</option>
+                <option>Juliano</option>
+                <option>Danilo</option>
+                <option>Rafael Chagas</option>
+                <option>Rafael Chamberlain</option>
+                <option>Marcos</option>
+                <option>Nicolodi</option>
+                <option>Marcelo</option>
+                <option>Lierson</option>
+                <option>Pâmela</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- CPF/CNPJ-->
+
+        <div class="form-group">
+          <label class="col-md-4 control-label">CPF / CNPJ:</label>
+          <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+              <input name="last_name" placeholder="CPF/CNPJ" class="form-control" id="cpf" type="text"
+                autocomplete="on|off">
+            </div>
+          </div>
+        </div>
+
+        <script>
+          var description = document.querySelector("#cpf");
+          description.addEventListener("paste", function (e) {
+            e.preventDefault();
+            alert("Comando inválido")
+          });
+
+        </script>
+
+        <!-- EMAIL-->
+        <div class="form-group">
+          <label class="col-md-4 control-label">E-Mail:</label>
+          <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+              <input name="email" placeholder="Endereço de E-mail" id="email" class="form-control" type="text"
+                autocomplete="on|off">
+            </div>
+          </div>
+        </div>
+
+        <script>
+          var description = document.querySelector("#email");
+          description.addEventListener("paste", function (e) {
+            e.preventDefault();
+            alert("Comando inválido")
+          });
+
+        </script>
+
+
+        <!-- TELEFONE-->
+
+        <div class="form-group">
+          <label class="col-md-4 control-label">Contato:</label>
+          <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+              <input name="last_name" placeholder="(XX) 123456789" class="form-control" id="telefone" type="text"
+                autocomplete="on|off">
+            </div>
+          </div>
+        </div>
+
+        <script>
+          var description = document.querySelector("#telefone");
+          description.addEventListener("paste", function (e) {
+            e.preventDefault();
+            alert("Comando inválido")
+
+          });
+
+        </script>
+
+        <!-- ENDEREÇO-->
+
+        <div class="form-group">
+          <label class="col-md-4 control-label">Rua:</label>
+          <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+              <input name="address" placeholder="Rua" id="rua" class="form-control" type="text" autocomplete="on|off">
+            </div>
+          </div>
+        </div>
+
+        <script>
+          var description = document.querySelector("#rua");
+          description.addEventListener("paste", function (e) {
+            e.preventDefault();
+            alert("Comando inválido")
+
+          });
+
+        </script>
+
+        <div class="form-group">
+          <label class="col-md-4 control-label">Número:</label>
+          <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+              <input name="address" placeholder="Número" id="numero" class="form-control" type="text"
+                autocomplete="on|off">
+            </div>
+          </div>
+        </div>
+
+        <script>
+          var description = document.querySelector("#numero");
+          description.addEventListener("paste", function (e) {
+            e.preventDefault();
+            alert("Comando inválido")
+
+          });
+
+        </script>
+
+        <div class="form-group">
+          <label class="col-md-4 control-label">Bairro:</label>
+          <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+              <input name="address" placeholder="Bairro" id="bairro" class="form-control" type="text"
+                autocomplete="on|off">
+            </div>
+          </div>
+        </div>
+
+        <script>
+          var description = document.querySelector("#bairro");
+          description.addEventListener("paste", function (e) {
+            e.preventDefault();
+            alert("Comando inválido")
+
+          });
+
+        </script>
+
+        <div class="form-group">
+          <label class="col-md-4 control-label">CEP:</label>
+          <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+              <input name="cep" placeholder="CEP" id="cep" class="form-control" type="text" autocomplete="on|off">
+            </div>
+          </div>
+        </div>
+
+        <script>
+          var description = document.querySelector("#cep");
+          description.addEventListener("paste", function (e) {
+            e.preventDefault();
+            alert("Comando inválido")
+
+          });
+
+        </script>
+
+        <div class="form-group">
+          <label class="col-md-4 control-label">Cidade:</label>
+          <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+              <input name="address" placeholder="Cidade" id="cidade" class="form-control" type="text"
+                autocomplete="on|off">
+            </div>
+          </div>
+        </div>
+
+        <script>
+          var description = document.querySelector("#cidade");
+          description.addEventListener("paste", function (e) {
+            e.preventDefault();
+            alert("Comando inválido")
+
+          });
+
+        </script>
+
+        <!--LOCALIZAÇÃO - GOOGLE MAPS-->
+        <div class="form-group">
+          <label class="col-md-4 control-label">Localização - Google Maps:</label>
+          <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+              <input name="address" placeholder="Insira o link" id="g_maps" class="form-control" type="text"
+                autocomplete="on|off">
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <!-- RESPONSÁVEL-->
+
+        <div class="form-group">
+          <label class="col-md-4 control-label">Responsável:</label>
+          <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+              <input name="first_name" placeholder="Campo não obrigatório" autocomplete="on|off" class="form-control"
+                id="resp" type="text">
+            </div>
+          </div>
+        </div>
+
+        <script>
+          var description = document.querySelector("#resp");
+          description.addEventListener("paste", function (e) {
+            e.preventDefault();
+            alert("Comando inválido")
+          });
+
+        </script>
+
+        <h1 style="font-family:Arial, Helvetica, sans-serif; text-align: center;">Sistema</h1>
+
+        <!-- POTENCIA DO SISTEMA - kWp-->
+
+        <div class="form-group">
+          <label class="col-md-4 control-label">Potência do sistema (kWp):</label>
+          <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+              <input name="first_name" placeholder="kWp" class="form-control" id="potencia" type="text"
+                autocomplete="on|off">
+            </div>
+          </div>
+        </div>
+
+        <script>
+          var description = document.querySelector("#potencia");
+          description.addEventListener("paste", function (e) {
+            e.preventDefault();
+            alert("Comando inválido")
+          });
+
+        </script>
+
+        <!-- QUANTIDADE DE MÓDULOS-->
+
+        <div class="form-group">
+          <label class="col-md-4 control-label">Quantidade de módulos:</label>
+          <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+              <input name="first_name" placeholder="Quantidade" class="form-control" id="qtd_modulos" type="text"
+                autocomplete="on|off">
+            </div>
+          </div>
+        </div>
+
+        <script>
+          var description = document.querySelector("#qtd_modulos");
+          description.addEventListener("paste", function (e) {
+            e.preventDefault();
+            alert("Comando inválido")
+          });
+
+        </script>
+
+        <div class="form-group">
+          <label class="col-md-4 control-label">Marca do modulo:</label>
+          <div class="col-md-4 selectContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+              <select name="state" class="form-control selectpicker" id="marca_md">
+                <option value="">Selecione uma opção</option>
+                <option value="opcao1">ASTRONERGY CHINT</option>
+                <option value="opcao2">BYD</option>
+                <option value="opcao3">CANADIAN</option>
+                <option value="opcao4">DAH</option>
+                <option value="opcao5">JA</option>
+                <option value="opcao6">JINKO</option>
+                <option value="opcao7">LONGI</option>
+                <option value="opcao8">QCELLS</option>
+
+              </select>
+            </div>
+          </div>
+        </div>
+
+
+
+        <!-- MODELO DE MÓDULO-->
+
+        <div class="form-group">
+          <label class="col-md-4 control-label">Modelo do módulo:</label>
+          <div class="col-md-4 selectContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+              <select name="state" class="form-control selectpicker" id="modelo_md">
+                
+
+              </select>
+            </div>
+          </div>
+        </div>
+
+
+        <script>
+          const select1 = document.getElementById("marca_md");
+          const select2 = document.getElementById("modelo_md");
+
+          const options = {
+            opcao1: ["","Astronergy Chint 410 W - CHSM72M-HC "],
+            opcao2: ["","BYD 335 W - P6C-36-SÉRIE-5BB-335W ", "BYD 445 W - BYD455MGK36 ", "BYD 540 W - BYD540MLK-36"],
+            opcao3: ["","CND 415 W - HIKU CS3W-415P ", "CND 420 W - HIKU CS3W-420P", "CND 450 W - CS3W450MS", "CND 455 W - CS3W455MS", "CND 550 W - CS6W550MS"],
+            opcao4: ["","DAH 450 W - DHM72L9/BF-450W "],
+            opcao5: ["","JA 540 W - JAM72D30-540/MB ", " JA 545 W - JAM72D30-545/MB", "JA 550 W - JAM72S30-550/MR", "JA 580 W - JAM72D30-580/MB ", "JA 585 W - JAM72D30-585/MB"],
+            opcao6: ["","JINKO 540 W - JKM540M-72HL4-BDVP", "JINKO 565 W - JKM565N-72HL4-V"],
+            opcao7: ["","LONGI 500 W - LR5-66HPH-500M", "LONGI 540 W - LR5-72HBD", "LONGI 545 W - LR5-72HPH-545", "LONGI 550 W - LR5-72HPH-550 "],
+            opcao8: ["","QCELLS 425 W - Q-PEAKDUOL-G6.3"],
+          };
+
+          select1.addEventListener("change", function () {
+            const selectedValue = select1.value;
+            const selectedOptions = options[selectedValue];
+
+            // limpar opções atuais
+            select2.innerHTML = "";
+
+            // adicionar as novas opções
+            selectedOptions.forEach(function (option) {
+              const optionElement = document.createElement("option");
+              optionElement.value = option;
+              optionElement.text = option;
+              select2.appendChild(optionElement);
+            });
+          });
+
+        </script>
+
+
+
+
+        <!-- QTD INVERSORES-->
+
+        <div class="form-group">
+          <label class="col-md-4 control-label">Quantidade de inversores:</label>
+          <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+              <input name="first_name" placeholder="Quantidade" class="form-control" id="qtd_inversor" type="text"
+                autocomplete="on|off">
+            </div>
+          </div>
+        </div>
+
+        <script>
+          var description = document.querySelector("#qtd_inversor");
+          description.addEventListener("paste", function (e) {
+            e.preventDefault();
+            alert("Comando inválido")
+          });
+
+        </script>
+
+
+        <!-- MARCA DE INVERSOR-->
+
+        <div class="form-group">
+          <label class="col-md-4 control-label">Marca do inversor:</label>
+          <div class="col-md-4 selectContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+              <select name="state" class="form-control selectpicker" id="marca_inv" onclick="outros_inversor()">
+                <option value="">Selecione uma opção</option>
+                <option value="opcao1">APSYSTEMS</option>
+                <option value="opcao2">ENPHASE</option>
+                <option value="opcao3">SOLAR EDGE</option>
+                <option value="OUTROS">OUTROS</option>
+
+
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- MODELO DE INVERSOR-->
+
+        <div class="form-group" id="inv_mod">
+          <label class="col-md-4 control-label">Modelo do inversor:</label>
+          <div class="col-md-4 selectContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+              <select name="state" class="form-control selectpicker" id="modelo_in">
+
+
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group" id="div_qtd_otm">
+          <label class="col-md-4 control-label">Quantidade de otimizadores:</label>
+          <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+              <input name="first_name" placeholder="Quantidade" class="form-control" id="qtd_otimizador" type="text"
+                autocomplete="on|off">
+            </div>
+          </div>
+        </div>
+
+        <script>
+          var description = document.querySelector("#qtd_otimizador");
+          description.addEventListener("paste", function (e) {
+            e.preventDefault();
+            alert("Comando inválido")
+          });
+
+        </script>
+
+
+        <div class="form-group" id="otimizador">
+          <label class="col-md-4 control-label">Modelo do otimizador:</label>
+          <div class="col-md-4 selectContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+              <select name="state" class="form-control selectpicker" id="otimiza">
+                <option value="">Selecione o otimizador</option>
+                <option>P601</option>
+                <option>P850</option>
+                <option>P950</option>
+                <option>P1100</option>
+
+
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group" id="outros_inv">
+          <label class="col-md-4 control-label">Inversor escolhido:</label>
+          <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+              <textarea class="form-control" name="comment" placeholder="Insira o modelo do inversor escolhido..."
+                id="inversor_manual"></textarea>
+            </div>
+          </div>
+        </div>
+
+
+        <script>
+          function outros_inversor() {
+            if (document.querySelector("#marca_inv").value == "OUTROS") {
+              $('#outros_inv').show();
+              $('#inv_mod').hide();
+            } else {
+              $('#outros_inv').hide();
+              $('#inv_mod').show();
+            }
+
+            if (document.querySelector("#marca_inv").value == "opcao3") {
+              $('#otimizador').show();
+              $('#div_qtd_otm').show();
+            } else {
+              $('#otimizador').hide();
+              $('#div_qtd_otm').hide();
+              document.querySelector("#otimiza").value = ""
+              document.querySelector("#qtd_otimizador").value = ""
+            }
+
+          }
+        </script>
+
+        <script>
+          const select3 = document.getElementById("marca_inv");
+          const select4 = document.getElementById("modelo_in");
+
+          const options_2 = {
+            opcao1: ["","DS3D-220", "QT2D-380"],
+            opcao2: ["","ENPHASE IQ7AM-72-2-US - 335W - 220V"],
+            opcao3: ["","SE 3.68K - SE3680H", "SE 3.68K + EV - SE3680H", "SE 5K - SE5000H", "SE 6K - SE6000H", "SE 8.25K - SE8250H", "SE 9.2K - SE9200H", "SE 9.2K + EV - SE9200H", "SE 20.1K", "SE 27.6K", "SE 33.3K", "SE 75K", "SE 100K"],
+
+          };
+
+          select3.addEventListener("change", function () {
+            const selectedValue_2 = select3.value;
+            const selectedOptions_2 = options_2[selectedValue_2];
+
+            // limpar opções atuais
+            select4.innerHTML = "";
+
+            // adicionar as novas opções
+            selectedOptions_2.forEach(function (option) {
+              const optionElement_2 = document.createElement("option");
+              optionElement_2.value = option;
+              optionElement_2.text = option;
+              select4.appendChild(optionElement_2);
+            });
+          });
+
+
+        </script>
+
+
+
+
+
+        <!-- TIPO DE TELHADO -->
+
+        <div class="form-group">
+          <label class="col-md-4 control-label">Tipo de telhado:</label>
+          <div class="col-md-4 selectContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+              <select name="state" class="form-control selectpicker" id="telhado">
+                <option value="">Selecione o tipo de telhado</option>
+                <option>Brasilit</option>
+                <option>Metálico ondulado</option>
+                <option>Metálico trapezoidal</option>
+                <option>Colonial</option>
+                <option>Lage</option>
+                <option>Solo</option>
+                <option>Zipada</option>
+
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- ALTURA PARA ACESSO-->
+
+
+
+        <div class="form-group">
+          <label class="col-md-4 control-label">Altura para acesso ao telhado:</label>
+          <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+              <input name="first_name" placeholder="em metros..." class="form-control" id="acesso_telhado" type="text"
+                autocomplete="on|off">
+            </div>
+          </div>
+        </div>
+
+        <script>
+          var description = document.querySelector("#acesso_telhado");
+          description.addEventListener("paste", function (e) {
+            e.preventDefault();
+            alert("Comando inválido")
+          });
+
+        </script>
+
+        <h1 style="font-family:Arial, Helvetica, sans-serif; text-align: center;">Modalidade de compensação</h1>
+
+
+
+
+        <!-- TIPO DE TELHADO -->
+
+        <div class="form-group">
+          <label class="col-md-4 control-label">Modalidade:</label>
+          <div class="col-md-4 selectContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+              <select name="state" class="form-control selectpicker" id="modalidade">
+                <option value="">Selecione uma opção:</option>
+                <option>Geração própria</option>
+                <option>Autoconsumo remoto</option>
+                <option>Geração compartilhada</option>
+                <option>EMUC</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- AUTOCONSUMO REMOTO -->
+
+
+
+
+
+        <h1 style="font-family:Arial, Helvetica, sans-serif; text-align: center;">Informações financeiras</h1>
+
+        <!-- CUSTO DO SISTEMA-->
+
+        <div class="form-group">
+          <label class="col-md-4 control-label">Custo do sistema (R$):</label>
+          <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+              <input name="first_name" placeholder="Custo total" class="form-control" id="custo" type="text"
+                autocomplete="on|off">
+            </div>
+          </div>
+        </div>
+
+        <script>
+          var description = document.querySelector("#custo");
+          description.addEventListener("paste", function (e) {
+            e.preventDefault();
+            alert("Comando inválido")
+          });
+
+        </script>
+
+        <!-- CONTRATO DO SISTEMA-->
+
+        <div class="form-group" id="nao">
+          <label class="col-md-4 control-label">Não vale</label>
+          <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+              <input name="first_name" placeholder="Valor total" class="form-control" id="contrato" type="text"
+                autocomplete="on|off">
+            </div>
+          </div>
+        </div>
+
+        <script>
+          $(document).ready(function () {
+            $('#nao').hide();
+
+
+          });
+
+        </script>
+
+        <div class="form-group">
+          <label class="col-md-4 control-label">Valor do contrato (R$):</label>
+          <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+              <input name="first_name" placeholder="Valor total" class="form-control" id="teste_02" type="text"
+                autocomplete="on|off">
+            </div>
+          </div>
+        </div>
+
+        <script>
+          var description = document.querySelector("#teste_02");
+          description.addEventListener("paste", function (e) {
+            e.preventDefault();
+            alert("Comando inválido")
+          });
+
+        </script>
+
+        <!-- FORMA DE PAGAMENTO-->
+        <div class="form-group">
+          <label class="col-md-4 control-label">Forma de pagamento:</label>
+          <div class="col-md-4 selectContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+              <select name="state" class="form-control selectpicker" id="forma" onclick="outros()">
+                <option value="">Selecione uma opção:</option>
+                <option>À vista</option>
+                <option>Entrada + 2x</option>
+                <option>Outros</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!--DESCRIÇÃO OPCIONAL PARA FORMA DE PAGAMENTO-->
+
+        <div class="form-group" id="outros_pag">
+          <label class="col-md-4 control-label">Descrição da forma de pagamento:</label>
+          <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+              <textarea class="form-control" name="comment"
+                placeholder="Descreva a forma de pagamento detalhadamente..." id="pag_desc"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <script>
+          var description = document.querySelector("#pag_desc");
+          description.addEventListener("paste", function (e) {
+            e.preventDefault();
+            alert("Comando inválido")
+          });
+
+        </script>
+
+        <script>
+          function outros() {
+            if (document.querySelector("#forma").value == "Outros") {
+              $('#outros_pag').show();
+            } else {
+              $('#outros_pag').hide();
+            }
+          }
+        </script>
+
+
+        <!-- RECEBIMENTO DE SISTEMA -->
+
+        <div class="form-group">
+          <label class="col-md-4 control-label">Recebimento de sistema:</label>
+          <div class="col-md-4 selectContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+              <select name="state" class="form-control selectpicker" id="recebimento">
+                <option value="">Possui local para armazenamento?</option>
+                <option>SIM</option>
+                <option>NÃO</option>
+
+              </select>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- OBSERVAÇÕES-->
+
+        <h1 style="font-family:Arial, Helvetica, sans-serif; text-align: center;">Observações</h1>
+
+
+        <div class="form-group">
+          <label class="col-md-4 control-label">Detahes do projeto:</label>
+          <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+              <textarea class="form-control" name="comment" id="descricao"
+                placeholder="Descreva todo o histórico e particularidades do projeto..."></textarea>
+            </div>
+          </div>
+        </div>
+
+        <script>
+          var description = document.querySelector("#descricao");
+          description.addEventListener("paste", function (e) {
+            e.preventDefault();
+            alert("Comando inválido")
+          });
+
+        </script>
+
+        <!-- Success message -->
+        <div class="alert alert-success" role="alert" id="success_message">Success <i
+            class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>
+
+      </fieldset>
+      
+      <!--ULTIMA ATUALIZAÇÃO-->
+<div style="text-align: center;">
+<h4>ÚLTIMA ATUALIZAÇÃO: <b>13/04/2023 - 17:54</b> </h4>
+</div>
+
+
+
+    </form>
+
+    <!--ESTILIZAÇÃO DE BOTÃO FORMULÁRIO-->
+
+
+  </div>
+
+  <div style="text-align: center; padding-bottom: 5%;">
+    <a class="myButton" onclick="verifica()">ENVIAR FORMULÁRIO</a>
+    <style>
+      .myButton {
+        box-shadow: inset 0px 1px 0px 0px #fff6af;
+        background: linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+        background-color: #ffec64;
+        border-radius: 6px;
+        border: 1px solid #ffaa22;
+        display: inline-block;
+        cursor: pointer;
+        color: #333333;
+        font-family: Arial;
+        font-size: 15px;
+        font-weight: bold;
+        padding: 6px 24px;
+        text-decoration: none;
+        text-shadow: 0px 1px 0px #ffee66;
+      }
+
+      .myButton:hover {
+        background: linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+        background-color: #ffab23;
+      }
+
+      .myButton:active {
+        position: relative;
+        top: 1px;
+      }
+      body {
+      
+         background-color: #42393b;
+
+}
+      
+    </style>
+
+    <!-- partial -->
+    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js'></script>
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
+
+<script>
+  $('#observacao').hide();
+  $('#outros_pag').hide();
+  $('#outros_inv').hide();
+  $('#otimizador').hide();
+  $('#div_qtd_otm').hide();
+
+  // função para verificar todas as vlaidaçoes para a próxima página
+
+  function verifica() {
+
+    //cliente
+    if (document.getElementById("cliente").value.length < 1) {
+      alert('Por favor, preencha o campo cliente');
+      document.getElementById("cliente").focus();
+      return false
+    }
+
+    //consultor
+    if (document.getElementById("consultor").value.length < 1) {
+      alert('Por favor, preencha o campo consultor');
+      document.getElementById("consultor").focus();
+      return false
+    }
+
+    //cpf/cnpj
+    if (document.getElementById("cpf").value.length < 11) {
+      alert('Por favor, preencha o campo CPF/CNPJ');
+      document.getElementById("cpf").focus();
+      return false
+    }
+
+    //email
+    if (document.getElementById("email").value.length < 11) {
+      alert('Por favor, preencha o campo E-mail');
+      document.getElementById("email").focus();
+      return false
+    }
+    //contato
+    if (document.getElementById("telefone").value.length < 11) {
+      alert('Por favor, preencha o campo Contato');
+      document.getElementById("telefone").focus();
+      return false
+    }
+
+    //rua
+    if (document.getElementById("rua").value.length < 1) {
+      alert('Por favor, preencha o campo Rua');
+      document.getElementById("rua").focus();
+      return false
+    }
+
+    //numero
+    if (document.getElementById("numero").value.length < 1) {
+      alert('Por favor, preencha o campo Número');
+      document.getElementById("numero").focus();
+      return false
+    }
+
+    //bairro
+    if (document.getElementById("bairro").value.length < 1) {
+      alert('Por favor, preencha o campo Bairro');
+      document.getElementById("bairro").focus();
+      return false
+    }
+
+    //cep
+    if (document.getElementById("cep").value.length < 8) {
+      alert('Por favor, preencha o campo CEP');
+      document.getElementById("cep").focus();
+      return false
+    }
+
+    //cep
+    if (document.getElementById("cidade").value.length < 5) {
+      alert('Por favor, preencha o campo Cidade');
+      document.getElementById("cidade").focus();
+      return false
+    }
+
+
+
+    //potencia do sistema
+    if (document.getElementById("potencia").value.length < 1) {
+      alert('Por favor, preencha o campo Potência (kWp)');
+      document.getElementById("potencia").focus();
+      return false
+    }
+
+    //quantidade de módulos
+    if (document.getElementById("qtd_modulos").value.length < 1) {
+      alert('Por favor, preencha o campo Quantidade de módulos');
+      document.getElementById("qtd_modulos").focus();
+      return false
+    }
+
+    //modelo do modulo
+    if (document.getElementById("modelo_md").value.length < 1) {
+      alert('Por favor, preencha o campo Modelo do módulo');
+      document.getElementById("modelo_md").focus();
+      return false
+    }
+
+    //quantidade de inversores
+    if (document.getElementById("qtd_inversor").value.length < 1) {
+      alert('Por favor, preencha o campo Quantidade de inversores');
+      document.getElementById("qtd_inversor").focus();
+      return false
+    }
+
+    // marca do inversor
+    if (document.getElementById("marca_inv").value == "OUTROS" && document.getElementById("inversor_manual").value.length < 1) {
+      alert('Por favor, preencha o campo Modelo do inversor');
+      document.getElementById("inversor_manual").focus();
+      return false
+    }
+
+    if (document.getElementById("marca_inv").value != "OUTROS" && document.getElementById("modelo_in").value.length < 1) {
+      alert('Por favor, preencha o campo Modelo do inversor');
+      document.getElementById("modelo_in").focus();
+      return false
+    }
+
+    //verificador solaredge
+
+    if (document.getElementById("marca_inv").value == "opcao3") {
+      if (document.getElementById("qtd_otimizador").value.length < 1 || document.getElementById("otimiza").value.length < 1) {
+        alert('Por favor, preencha todos os campos para inversores Solar Edge');
+        document.getElementById("modelo_in").focus();
+        return false
+      }
+    }
+
+    //tipo de telhado
+    if (document.getElementById("telhado").value.length < 1) {
+      alert('Por favor, preencha o campo Tipo de telhado');
+      document.getElementById("telhado").focus();
+      return false
+    }
+
+    //acesso ao telhado
+    if (document.getElementById("acesso_telhado").value.length < 1) {
+      alert('Por favor, preencha o campo Altura para acesso ao telhado');
+      document.getElementById("acesso_telhado").focus();
+      return false
+    }
+
+    //Modalidade
+    if (document.getElementById("modalidade").value.length < 1) {
+      alert('Por favor, preencha o campo Modalidade');
+      document.getElementById("modalidade").focus();
+      return false
+    }
+
+    //Custo
+    if (document.getElementById("custo").value.length < 1) {
+      alert('Por favor, preencha o campo Custo');
+      document.getElementById("custo").focus();
+      return false
+    }
+
+    //Valor do contrato
+    if (document.getElementById("teste_02").value.length < 1) {
+      alert('Por favor, preencha o campo Valor do contrato');
+      document.getElementById("teste_02").focus();
+      return false
+    }
+
+    //Forma de pagamento
+    if (document.getElementById("forma").value == "Outros") {
+      if (document.getElementById("pag_desc").value.length < 1) {
+        alert('Por favor, preencha a descrição com a nova forma de pagamento.');
+        document.getElementById("pag_desc").focus();
+        return false
+      }
+
+    }
+
+    //FORMA DE PAGAMENTO
+    if (document.getElementById("forma").value != "Outros") {
+
+      if (document.getElementById("forma").value.length < 1) {
+        alert('Por favor, preencha o campo Forma de pagamento.');
+        document.getElementById("forma").focus();
+        return false
+      }
+    }
+    //RECEBIMENTO
+    if (document.getElementById("recebimento").value.length < 1) {
+      alert('Por favor, preencha o campo Recebimento');
+      document.getElementById("recebimento").focus();
+      return false
+    }
+
+    //setar os valores da forma;
+    if (document.getElementById("forma").value == "Outros") {
+      localStorage.setItem('forma_resp', document.querySelector("#pag_desc").value);
+    }else{
+      localStorage.setItem('forma_resp', document.querySelector("#forma").value);
+    }
+
+    //setar os valores do modelo de inversor;
+    if (document.getElementById("marca_inv").value == "OUTROS") {
+      localStorage.setItem('mod_i_resp', document.querySelector("#inversor_manual").value);
+    }else{
+      localStorage.setItem('mod_i_resp', document.querySelector("#modelo_in").value);
+    }
+
+    if (document.querySelector("#marca_inv").value != "opcao3") {
+    
+              document.querySelector("#otimiza").value = ""
+              document.querySelector("#div_qtd_otm").value = ""
+            }
+
+    
+            if (window.confirm("Você está certo de que todas as informações estão corretas?")) {
+  window.open("template_pdf.html", "Obrigado por acessar o formulário!");
+}
+          
+  localStorage.setItem('cliente_resp', document.querySelector("#cliente").value);
+  localStorage.setItem('consultor_resp', document.querySelector("#consultor").value);
+  localStorage.setItem('cpf_resp', document.querySelector("#cpf").value);
+  localStorage.setItem('email_resp', document.querySelector("#email").value);
+  localStorage.setItem('telefone_resp', document.querySelector("#telefone").value);
+  localStorage.setItem('rua_resp', document.querySelector("#rua").value);
+  localStorage.setItem('numero_resp', document.querySelector("#numero").value);
+  localStorage.setItem('bairro_resp', document.querySelector("#bairro").value);
+  localStorage.setItem('cep_resp', document.querySelector("#cep").value);
+  localStorage.setItem('cidade_resp', document.querySelector("#cidade").value);
+  localStorage.setItem('responsavel_resp', document.querySelector("#resp").value);
+  localStorage.setItem('potencia_resp', document.querySelector("#potencia").value);
+  localStorage.setItem('qtd_m_resp', document.querySelector("#qtd_modulos").value);
+  localStorage.setItem('mod_m_resp', document.querySelector("#modelo_md").value);
+  localStorage.setItem('qtd_i_resp', document.querySelector("#qtd_inversor").value);
+  localStorage.setItem('telhado_resp', document.querySelector("#telhado").value);
+  localStorage.setItem('arma_resp', document.querySelector("#recebimento").value);
+  localStorage.setItem('modalidade_resp', document.querySelector("#modalidade").value);
+  localStorage.setItem('custo_resp', document.querySelector("#custo").value);
+  localStorage.setItem('contrato_resp', document.querySelector("#contrato").value);
+  localStorage.setItem('obs_resp', document.querySelector("#descricao").value);
+  localStorage.setItem('teste_02_resp', document.querySelector("#teste_02").value);
+  localStorage.setItem('maps_resp', document.querySelector("#g_maps").value);
+  localStorage.setItem('otm_resp', document.querySelector("#otimiza").value);
+  localStorage.setItem('altura_resp', document.querySelector("#acesso_telhado").value);
+  localStorage.setItem('qtd_otm_resp', document.querySelector("#qtd_otimizador").value);
+
+
+  }
+
+
+
+
+</script>
