@@ -406,21 +406,6 @@
         </script>
 
 
-
-
-        <!-- QTD INVERSORES-->
-
-        <div class="form-group">
-          <label class="col-md-4 control-label">Quantidade de inversores:</label>
-          <div class="col-md-4 inputGroupContainer">
-            <div class="input-group">
-              <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-              <input name="first_name" placeholder="Quantidade" class="form-control" id="qtd_inversor" type="text"
-                autocomplete="on|off">
-            </div>
-          </div>
-        </div>
-
         <script>
           var description = document.querySelector("#qtd_inversor");
           description.addEventListener("paste", function (e) {
@@ -451,6 +436,23 @@
           </div>
         </div>
 
+        <div class="form-group" id="verifica">
+            <label class="col-md-4 control-label">Possui modelos de inversores diferentes?</label>
+            <div class="col-md-4 selectContainer">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                <select name="state" class="form-control selectpicker" id="verificador_02" onclick="modelo_inv()">
+                  <option value="">Selecione uma opção</option>
+                  <option value="SIM">SIM</option>
+                  <option>NÃO</option>
+                
+  
+  
+                </select>
+              </div>
+            </div>
+          </div>
+
         <!-- MODELO DE INVERSOR-->
 
         <div class="form-group" id="inv_mod">
@@ -465,6 +467,30 @@
             </div>
           </div>
         </div>
+
+        <!-- QTD INVERSORES-->
+
+        <div class="form-group" id="inv_qtd">
+            <label class="col-md-4 control-label">Quantidade de inversores:</label>
+            <div class="col-md-4 inputGroupContainer">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                <input name="first_name" placeholder="Quantidade" class="form-control" id="qtd_inversor" type="text"
+                  autocomplete="on|off">
+              </div>
+            </div>
+          </div>
+
+        <div class="form-group" id="outros_inv">
+            <label class="col-md-4 control-label">Inversor escolhido:</label>
+            <div class="col-md-4 inputGroupContainer">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                <textarea class="form-control" name="comment" placeholder="Insira o modelo do inversor escolhido..."
+                  id="inversor_manual"></textarea>
+              </div>
+            </div>
+          </div>
 
         <div class="form-group" id="div_qtd_otm">
           <label class="col-md-4 control-label">Quantidade de otimizadores:</label>
@@ -505,16 +531,7 @@
           </div>
         </div>
 
-        <div class="form-group" id="outros_inv">
-          <label class="col-md-4 control-label">Inversor escolhido:</label>
-          <div class="col-md-4 inputGroupContainer">
-            <div class="input-group">
-              <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-              <textarea class="form-control" name="comment" placeholder="Insira o modelo do inversor escolhido..."
-                id="inversor_manual"></textarea>
-            </div>
-          </div>
-        </div>
+        
 
 
         <script>
@@ -529,18 +546,34 @@
 
             if (document.querySelector("#marca_inv").value == "opcao3") {
               $('#otimizador').show();
+              $('#verifica').show();
               $('#div_qtd_otm').show();
             } else {
               $('#otimizador').hide();
+              $('#verifica').hide();
               $('#div_qtd_otm').hide();
               document.querySelector("#otimiza").value = ""
               document.querySelector("#qtd_otimizador").value = ""
             }
 
           }
+
+          function modelo_inv(){
+            if (document.querySelector("#verificador_02").value == "SIM") {
+              $('#outros_inv').show();
+              $('#inv_mod').hide();
+              $('#inv_qtd').hide();
+            } else {
+              $('#outros_inv').hide();
+              $('#inv_mod').show();
+              $('#inv_qtd').show();
+            }
+
+          }
         </script>
 
         <script>
+            $('#verifica').hide();
           const select3 = document.getElementById("marca_inv");
           const select4 = document.getElementById("modelo_in");
 
